@@ -41,7 +41,7 @@ pipeline {
                         } catch (err) {
                             echo: 'caught error: $err'
                         }
-                        sh "sshpass -p '$USERPASS' -v ssh -o StrictHostKeyChecking=no $USERNAME@18.209.229.85 \"docker run --restart always --name train-schedule -p 8080:8080 -d willbla/train-schedule:${env.BUILD_NUMBER}\""
+                        sh "sshpass -p '$USERPASS' -v ssh -o StrictHostKeyChecking=no $USERNAME@18.209.229.85 \"docker run --restart always --name train-schedule -p 8080:8080 -d swapnil123/train-schedule:${env.BUILD_NUMBER}\""
                     }
                 }
             }
